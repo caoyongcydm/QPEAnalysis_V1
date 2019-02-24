@@ -33,6 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CaoYong.DataProc">
+      <HintPath>F:\程序源码\DLL\Confused\CaoYong.DataProc.dll</HintPath>
+    </Reference>
+    <Reference Include="CaoYong.DataType">
+      <HintPath>F:\程序源码\DLL\Confused\CaoYong.DataType.dll</HintPath>
+    </Reference>
+    <Reference Include="CaoYong.SimpleLog">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2017\Projects\GetDataFromCmiss_V1\GetDataFromCmiss_V1\bin\Release\CaoYong.SimpleLog.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
