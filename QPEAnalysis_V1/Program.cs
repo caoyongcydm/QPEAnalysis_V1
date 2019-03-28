@@ -133,10 +133,10 @@ namespace QPEAnalysis_V1
                     sdInputData.ClearToNum(0.0);
                     sdInputData.ReadValFromMicaps3(inputFilePath);
                     sdInputData.ClearToNumGreaterThan(0.0, 100.0);                 //简单质量控制
-                    sdInputData.ClearToNumLessThan(0.0, 0.15);                     //简单质量控制，注意冬季情况的适用性
+                    sdInputData.ClearToNumLessThan(0.0, 0.10);                     //简单质量控制，注意冬季情况的适用性
                     GridData gdOutputData = new GridData(70.0, 140.0, 0.0, 60.0, 0.05, 0.05);
                     gdOutputData.ClearToNum(0.0);
-                    gdOutputData = SpatialAnalisis.GressManInterpolationForRain(sdInputData, gdOutputData, 0.2, 2.0, new double[] {1.0, 0.8, 0.6, 0.5, 0.4, 0.3, 0.2 }); //分析25-5公里尺度
+                    gdOutputData = SpatialAnalisis.GressManInterpolationForRain(sdInputData, gdOutputData, 0.2, 2.0, new double[] { 1.0, 0.8, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1 }); //分析25-5公里尺度
                     gdOutputData.WriteFloatValToBin(outputFilePath + ".bin");
                     string strHeader = StringProcess.DateReplace(@"diamond 4 YYYYMMDDHH00_01hour_QPE YYYY MM DD HH NN 000 0.05 0.05 70.0 140.0 0.0 60.0 1401 1201 2.0 -2.0 20.0 1 00", dtOutput, 000);
                     gdOutputData.WriteValToMicaps4(outputFilePath + ".m4", strHeader);
